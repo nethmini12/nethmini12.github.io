@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yashodha Herath - Biotechnology undergraduate portfolio">
+  <title>Yashodha Herath | Biotechnology Portfolio</title>
+  <style>
+    :root {
+      --purple: #6d28d9;
+      --purple-dark: #4c1d95;
+      --purple-light: #f3e8ff;
+      --lavender: #faf7ff;
+      --ink: #29243a;
+      --muted: #6b6478;
+      --white: #ffffff;
+      --border: #e8def7;
+      --shadow: 0 10px 30px rgba(76, 29, 149, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--lavender);
+    }
+    a { color: var(--purple); }
+    .container { width: min(1080px, 92%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav {
+      min-height: 68px; display: flex; align-items: center;
+      justify-content: space-between; gap: 18px; flex-wrap: wrap;
+      padding: 12px 0;
+    }
+    .brand { font-weight: 800; color: var(--purple-dark); text-decoration: none; }
+    nav { display: flex; gap: 15px; flex-wrap: wrap; }
+    nav a { text-decoration: none; font-size: .92rem; font-weight: 700; }
+    nav a:hover { text-decoration: underline; }
+    .hero { padding: 76px 0 62px; background: linear-gradient(135deg, #f3e8ff, #fff 70%); }
+    .hero-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 42px; align-items: center; }
+    .eyebrow {
+      color: var(--purple); font-weight: 800; text-transform: uppercase;
+      letter-spacing: .12em; font-size: .8rem;
+    }
+    h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); line-height: 1.08; margin: 10px 0 18px; color: var(--purple-dark); }
+    .hero p { max-width: 650px; color: var(--muted); font-size: 1.08rem; }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; }
+    .btn {
+      display: inline-block; padding: 11px 18px; border-radius: 999px;
+      text-decoration: none; font-weight: 800; border: 2px solid var(--purple);
+    }
+    .btn.primary { color: white; background: var(--purple); }
+    .btn.secondary { color: var(--purple); background: white; }
+    .photo-wrap { display: flex; justify-content: center; }\n    .profile-photo { width: min(280px, 75vw); aspect-ratio: 1; object-fit: cover; object-position: center; border-radius: 50%; border: 7px solid #e9d5ff; box-shadow: var(--shadow); }
+    .photo-placeholder {
+      width: min(280px, 75vw); aspect-ratio: 1; border-radius: 50%;
+      background: white; border: 7px solid #e9d5ff; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; color: var(--purple-dark); padding: 22px;
+    }
+    .photo-placeholder .icon { font-size: 4rem; line-height: 1.2; }
+    .photo-placeholder strong { margin-top: 10px; }
+    .photo-placeholder span { color: var(--muted); font-size: .85rem; }
+    section { padding: 58px 0; }
+    section:nth-of-type(even) { background: white; }
+    .section-title { margin: 0 0 8px; font-size: 2rem; color: var(--purple-dark); }
+    .section-intro { margin: 0 0 26px; color: var(--muted); max-width: 720px; }
+    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card {
+      background: white; border: 1px solid var(--border); border-radius: 18px;
+      padding: 22px; box-shadow: var(--shadow);
+    }
+    section:nth-of-type(even) .card { background: var(--lavender); }
+    .card h3 { margin: 0 0 7px; color: var(--purple-dark); }
+    .card p { margin: 6px 0; color: var(--muted); }
+    .tag-list { display: flex; gap: 9px; flex-wrap: wrap; margin-top: 14px; }
+    .tag { background: var(--purple-light); color: var(--purple-dark); padding: 6px 11px; border-radius: 999px; font-size: .9rem; }
+    .contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .contact-item { padding: 18px; background: var(--lavender); border: 1px solid var(--border); border-radius: 14px; overflow-wrap: anywhere; }
+    .contact-item strong { display: block; color: var(--purple-dark); }
+    footer { text-align: center; padding: 25px 0; background: var(--purple-dark); color: white; }
+    footer p { margin: 5px; }
+    @media (max-width: 720px) {
+      .hero-grid, .cards, .contact-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      .photo-wrap { grid-row: 1; }
+      .nav { justify-content: center; }
+      nav { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">YH · Portfolio</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Biotechnology Undergraduate</div>
+          <h1>Yashodha Herath</h1>
+          <p>
+            I am a first-year BSc (Hons) Biotechnology undergraduate at the Sri Lanka
+            Institute of Information Technology (SLIIT). I am interested in laboratory
+            science, biotechnology research, and scientific innovation. I hope to develop
+            my practical skills and contribute to the biotechnology field.
+          </p>
+          <div class="actions">
+            <a class="btn primary" href="resume.pdf" download>Download My CV (PDF)</a>
+            <a class="btn secondary" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="photo-wrap">
+          <img class="profile-photo" src="profile-photo.png" alt="Photograph of Yashodha Herath">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-intro">
+          I am motivated to learn more about biology, chemistry, and biotechnology.
+          I value accuracy, teamwork, communication, and continuous learning. Through
+          my studies and extracurricular activities, I aim to build a strong foundation
+          for a future career in biotechnology research and laboratory work.
+        </p>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Educational Qualifications</h2>
+        <p class="section-intro">My academic background and current studies.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>BSc (Hons) Biotechnology</h3>
+            <p><strong>Sri Lanka Institute of Information Technology (SLIIT)</strong></p>
+            <p>2026–2030</p>
+          </article>
+          <article class="card">
+            <h3>G.C.E. Advanced Level</h3>
+            <p><strong>K/ Seethadevi Girls' College</strong></p>
+            <p>2024–2025</p>
+          </article>
+          <article class="card">
+            <h3>G.C.E. Ordinary Level</h3>
+            <p><strong>K/ Seethadevi Girls' College</strong></p>
+            <p>School education</p>
+          </article>
+          <article class="card">
+            <h3>Daham Pasal Final Examination</h3>
+            <p>2023</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Volunteer Experience</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>School and Community Activities</h3>
+            <p>Participated in school and community service activities, contributing to teamwork and social responsibility initiatives.</p>
+          </article>
+          <article class="card">
+            <h3>School Event Support</h3>
+            <p>Assisted in organizing school events and activities through active participation and coordination.</p>
+          </article>
+          <article class="card">
+            <h3>Science-Related Activities</h3>
+            <p>Supported science-related activities and participated in the School Science Society.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities">
+      <div class="container">
+        <h2 class="section-title">Extracurricular Activities</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>School Netball Team</h3>
+            <p>Best Player – School Netball Team (2024).</p>
+          </article>
+          <article class="card">
+            <h3>School Athletic Team</h3>
+            <p>Member of the School Athletic Team.</p>
+          </article>
+          <article class="card">
+            <h3>House Captain</h3>
+            <p>House Captain, Viharamahadevi House, inter-house sports meet (2023).</p>
+          </article>
+          <article class="card">
+            <h3>School Science Society</h3>
+            <p>Member of the School Science Society.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-intro">Skills listed in my CV.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>Personal and Professional Skills</h3>
+            <div class="tag-list">
+              <span class="tag">Scientific observation</span>
+              <span class="tag">Analytical skills</span>
+              <span class="tag">Attention to detail</span>
+              <span class="tag">Accuracy</span>
+              <span class="tag">Teamwork</span>
+              <span class="tag">Communication</span>
+              <span class="tag">Time management</span>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Technical Skills</h3>
+            <div class="tag-list">
+              <span class="tag">Sample preparation and handling</span>
+              <span class="tag">Preparation of standard solutions</span>
+              <span class="tag">Laboratory documentation</span>
+              <span class="tag">Record keeping</span>
+              <span class="tag">Microsoft Word</span>
+              <span class="tag">Microsoft Excel</span>
+              <span class="tag">Microsoft PowerPoint</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="hobbies">
+      <div class="container">
+        <h2 class="section-title">Languages & Hobbies</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Languages</h3>
+            <p>Sinhala – Native</p>
+            <p>English – Fluent</p>
+            <p>Tamil – Basic</p>
+          </article>
+          <article class="card">
+            <h3>Hobbies and Interests</h3>
+            <p>I enjoy learning about science and biotechnology and taking part in sports. I will continue to develop my interests through my studies and extracurricular activities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="resume">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <p class="section-intro">Download the PDF version of my Practical 1 CV.</p>
+        <a class="btn primary" href="resume.pdf" download>Download CV (PDF)</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-intro">Feel free to contact me by email.</p>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <strong>Email</strong>
+            <a href="mailto:nethminiherath202@gmail.com">nethminiherath202@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <strong>Location</strong>
+            <span>Pilimathalawa, Kandy, Sri Lanka</span>
+          </div>
+        </div>
+        <p><small>Consider whether you want to publish your phone number publicly before adding it to this page.</small></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Yashodha Herath</strong> · Biotechnology Portfolio</p>
+    <p>Created for SC1172: Introduction to Information Technology</p>
+  </footer>
+</body>
+</html>
